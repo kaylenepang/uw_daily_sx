@@ -31,8 +31,7 @@ import os
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-
-def send_message(groupme_bot, form_link, msg):
+def send_message(DAILY_RPE_BOT,RPE_link, msg):
     url = 'https://api.groupme.com/v3/bots/post'
     data = {
         'bot_id': os.environ.get(DAILY_RPE_BOT),
@@ -41,24 +40,24 @@ def send_message(groupme_bot, form_link, msg):
     tries = 3
     for i in range(tries):
         try:
-            print("sending to bot {}".format(groupme_bot))
+            print("sending to bot {}".format(DAILY_RPE_BOT))
             request = Request(url, urlencode(data).encode())
             json = urlopen(request).read().decode()
-            print("success sending to bot {}".format(groupme_bot))
+            print("success sending to bot {}".format(DAILY_RPE_BOT))
             print("response: {}".format(json))
             break
         except Exception as e:
-            print("failed sending to bot {}".format(groupme_bot))
+            print("failed sending to bot {}".format(DAILY_RPE_BOT))
             print(e)
         try:
-            print("sending to bot {}".format(groupme_bot))
+            print("sending to bot {}".format(DAILY_RPE_BOT))
             request = Request(url, urlencode(data).encode())
             json = urlopen(request).read().decode()
-            print("success sending to bot {}".format(groupme_bot))
+            print("success sending to bot {}".format(DAILY_RPE_BOT))
             print("response: {}".format(json))
             break
         except Exception as e:
-            print("failed sending to bot {}".format(groupme_bot))
+            print("failed sending to bot {}".format(DAILY_RPE_BOT))
             print(e)
 
             
