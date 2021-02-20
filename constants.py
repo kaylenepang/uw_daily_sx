@@ -1,4 +1,4 @@
-QUARANTINE_MESSAGE = "You have to fill this out every day. " \
+QUARANTINE_MESSAGE = "You have to fill out RPE after training everyday if you played and/or ran." \
                      "If you miss a day you must contact your athletic trainer for the reason why. " \
                      "Missed days DO NOT count toward quarantine unless approved by your " \
                      "athletic trainer or team physician."
