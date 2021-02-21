@@ -24,6 +24,6 @@ from constants import WELLNESS_MESSAGE
 send_message(
     'DAILY_WELLNESS_BOT', # players text bot from heroku configs
     os.environ.get('WELLNESS_LINK'), # google form link from heroku configs
-    RPE_MESSAGE # message
+    WELLNESS_MESSAGE # message
 )
 
