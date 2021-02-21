@@ -6,8 +6,8 @@ from urllib.request import Request, urlopen
 def send_message(groupme_bot, form_link, msg):
     url = 'https://api.groupme.com/v3/bots/post'
     data = {
-        'bot_id': os.environ.get(DAILY_RPE_BOT),
-        'text': "{} {}".format(msg, RPE_link),
+        'bot_id': os.environ.get(groupme_bot),
+        'text': "{} {}".format(msg, form_link),
     }
     tries = 3
     for i in range(tries):
